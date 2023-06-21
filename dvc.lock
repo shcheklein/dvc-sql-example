@@ -1,0 +1,21 @@
+schema: '2.0'
+stages:
+  query:
+    cmd: python query.py
+    outs:
+    - path: customers.parquet
+      hash: md5
+      md5: 2656dc819ad6e3615e1b97fdb1f6dd17
+      size: 11964
+  process:
+    cmd: python process.py
+    deps:
+    - path: customers.parquet
+      hash: md5
+      md5: 2656dc819ad6e3615e1b97fdb1f6dd17
+      size: 11964
+    outs:
+    - path: result.txt
+      hash: md5
+      md5: 2392ddc5fc69f3dc55ca3967d40775c9
+      size: 7

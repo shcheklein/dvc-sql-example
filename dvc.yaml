@@ -1,0 +1,12 @@
+stages:
+  query:
+    cmd: python query.py
+    outs:
+      - customers.parquet
+  process:
+    cmd: python process.py
+    deps:
+      - customers.parquet
+    outs:
+      - result.txt
+

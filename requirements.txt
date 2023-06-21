@@ -1,0 +1,7 @@
+dvc[azure]
+pyodbc
+pandas
+pyarrow
+python-dotenv
+
+
